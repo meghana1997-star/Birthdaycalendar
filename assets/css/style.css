@@ -99,19 +99,49 @@ li {
 
 /*for wrapper*/
 .wrapper {
-  max-width: 1360px;
-  width: 86%; 
+  max-width: 1149px;
   margin: 0 auto;
 }
+
+body { font-family: 'Open Sans', sans-serif; }
+
+/* Css Reset  */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --heading-color: #5A6A77;
+  --bg-color: #EAF0F2;
+  --light-violet: #AB9EEE;
+  --dark-blue: #4286EF;
+  --light-white: #E2DDF9;
+  --label-color: #5A6A77;
+}
+
+/* Common Classes */
+.upper--case { text-transform: uppercase; }
+
 /*=================================
   Header styling starts here
 =================================*/
+.header {
+  padding: 46px 0 62px;
+  background-color: var(--bg-color);
+}
 
-
-
-
-
-
+.header__heading {
+  color: var(--heading-color);
+  font-size: 40px;
+  font-weight: 300;
+  text-align: center;
+}
 /*=================================
   Header styling ends here
 =================================*/  
@@ -120,35 +150,170 @@ li {
   main styling starts here
 =================================*/
 
+/* display styling starts here */
+.display { background-color: var(--bg-color); }
 
+.display__days {
+  margin-bottom: 45px;
+  display: flex;
+  justify-content: space-between;
+}
 
+.display__days__list { flex-basis: 13.4%; }
 
+.display__days__heading {
+  padding: 10px 15px;
+  border: 1px solid var(--light-violet);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  background-color: var(--light-violet);
+  color: var(--light-white);
+  font-size: 15.5px;
+  font-weight: 600;
+  text-align: right;
+}
 
+.display__days__content {
+  width: 100%;
+  height: 152px;
+  border: 1px solid #CCD1D3;
+  border-top: none;
+  background-color: var(--white);
+}
 
+.display__days__count {
+  margin: 10px 0 0 5px;
+  color: #555;
+  font-family: 'Open Sans';
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
 
+.display__peoples {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 
-/*=================================
-  main styling ends here
-=================================*/
+.display__peoples.day-empty .display__peoples__list {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: var(--bg-color);
+}
 
-/*=================================
-  footer styling starts here
-=================================*/ 
+.display__peoples.day-empty .display__peoples__list::before {
+  content: "\f119";
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: var(--dark-blue);
+  font-family: "FontAwesome";
+  font-size: 100px;
+  align-items: center;
+  justify-content: center;
+}
 
+.display__peoples__list {
+  display: flex;
+  background-color: #888;
+  align-items: center;
+  justify-content: center;
+}
 
+.display__peoples.width1 .display__peoples__list {
+  height: 100%;
+  flex-basis: 100%;
+}
 
+.display__peoples.width2 .display__peoples__list {
+  height: 50%;
+  flex-basis: 50% !important;
+}
 
+.display__peoples.width3,
+.display__peoples.width4, 
+.display__peoples.width5 {
+  height: auto;
+}
 
+.display__peoples.width3 .display__peoples__list {
+  height: 50.8px !important;
+  flex-basis: 33.333%;
+}
 
+.display__peoples.width4 .display__peoples__list {
+  height: 38px;
+  flex-basis: 25% !important;
+}
+.display__peoples.width5 .display__peoples__list {
+  height: 30.3px;
+  flex-basis: 20% !important;
+}
 
- /*=================================
-  footer styling ends here
-=================================*/ 
+.display__peoples__heading { text-align: center; }
 
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
+.display__peoples__heading a {
+  color: var(--white);
+  font-weight: 700;
+}
 
+/* Form Styling Starts */
+.form { display: flex; }
 
+.form__data {
+  padding: 28px;
+  border: 1px solid #CCD1D3;
+  border-radius: 3px;
+  outline: none;
+  margin-right: 43px;
+  font-size: 16px;
+  flex-basis: 59.8%;
+}
 
-}  
+.form__input { flex-basis: 27%; }
+
+.form__label {
+  color: var(--label-color);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.input { margin: 8px 0 46px; }
+
+.input__year {
+  width: 100%;
+  padding: 17px 13px;
+  border: 1px solid #CCD1D3;
+  border-radius: 3px;
+  outline: none;
+  color: var(--black);
+  font-size: 22px;
+  letter-spacing: .5px;
+}
+
+.submit__btn {
+  padding: 17px 40px;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  background-color: var(--dark-blue);
+  color: rgb(207, 231, 252);
+  font-size: 22px;
+  font-weight: 800;
+  box-shadow: 0 3px 1px hsl(216, 87%, 49%);
+  transition: .5s;
+}
+
+.submit__btn:hover {
+  color: var(--dark-blue);
+  background-color: var(--white);
+  box-shadow: 3px 3px 3px hsl(216, 87%, 49%);
+}
+/* display styling ends here */
