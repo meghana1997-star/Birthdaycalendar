@@ -1,0 +1,22 @@
+{
+  "name": "birthdaycalendar",
+  "version": "1.0.0",
+  "description": "birthdaycalendar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meghana1997-star/Birthdaycalendar.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meghana1997-star/Birthdaycalendar/issues"
+  },
+  "homepage": "https://github.com/meghana1997-star/Birthdaycalendar#readme",
+  "dependencies": {
+    "browserify": "^17.0.0"
+  }
+}
